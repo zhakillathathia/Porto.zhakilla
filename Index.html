@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio 5 Tahun Mendatang</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* --- HEADER / BANNER (BIRU) --- */
+        header {
+            background-color: #3b82f6; 
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- LAYOUT UTAMA --- */
+        .wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        /* --- SIDEBAR MENU (KUNING) --- */
+        .sidebar {
+            background-color: #eab308; 
+            width: 25%;
+            padding: 40px 30px;
+        }
+
+        .sidebar ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 18px;
+            color: #000;
+        }
+
+        .sidebar ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            text-decoration: underline;
+        }
+
+        /* --- KONTEN UTAMA (COKELAT TUA) --- */
+        .content-area {
+            background-color: #78350f; 
+            color: white;
+            width: 75%;
+            padding: 45px 50px;
+        }
+
+        /* Menyembunyikan tab konten yang tidak aktif */
+        .tab-content {
+            display: none;
+        }
+
+        /* Menampilkan tab konten yang aktif */
+        .tab-content.active {
+            display: block;
+        }
+
+        .content-area h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .content-area p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+        
+        .content-area ul {
+            padding-left: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .content-area ul li {
+            margin-bottom: 10px;
+        }
+
+        /* --- FOOTER (HIJAU) --- */
+        footer {
+            background-color: #0f766e; 
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 1.15rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Responsif untuk tampilan HP / Layar Kecil */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+            }
+            .sidebar, .content-area {
+                width: 100%;
+            }
+            .sidebar {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        {{ Tambahkan Gambar Banner dan Foto Terbaik Anda }}
+    </header>
+
+    <div class="wrapper">
+        
+        <nav class="sidebar">
+            <ul>
+                <li><a onclick="openTab(event, 'profil')" id="defaultOpen" class="tab-link">Profil</a></li>
+                <li><a onclick="openTab(event, 'pendidikan')" class="tab-link">Riwayat Pendidikan</a></li>
+                <li><a onclick="openTab(event, 'organisasi')" class="tab-link">Riwayat Organisasi</a></li>
+                <li><a onclick="openTab(event, 'pekerjaan')" class="tab-link">Riwayat Pekerjaan</a></li>
+                <li><a onclick="openTab(event, 'karya')" class="tab-link">Karya Tulis / Produk</a></li>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            
+            <div id="profil" class="tab-content">
+                <h2>Portofolio Saya 5 Tahun Mendatang</h2>
+                <p>Nama saya Zhakilla Thathia Larasati, seorang lulusan Sistem Informasi. Dalam 5 tahun ke depan, saya menargetkan diri untuk berkarier sebagai seorang Software Engineer dan Full-Stack Programmer profesional di salah satu tech company terkemuka.</p>
+                <p>Fokus utama saya adalah menjembatani kebutuhan bisnis dengan solusi teknologi mutakhir. Saya berkomitmen untuk terus menguasai berbagai stack pemrograman modern, merancang arsitektur sistem yang efisien, serta membangun aplikasi inovatif yang mampu memberikan dampak nyata bagi masyarakat luas.</p>
+                <p>UI/UX disigner mendesain tampilan aplikasi agar estetik dan mudah digunakan</p>
+                <p>IT project manager:mengatur jalannya proyek pembuatan software/sistem dari awal hingga ahkhir 
+                </p>
+            </div>
+
+            <div id="pendidikan" class="tab-content">
+                <h2>Riwayat Pendidikan</h2>
+                <p>Berikut adalah riwayat pendidikan:</p>
+                <ul>
+                    <li><strong>Sarjana (S1) Sistem Informasi</strong><br>Fakultas Sains dan Teknologi (Sainteks)</li>
+                    <li><strong>magister(S2) teknologi informasi(MTI)</strong>UNIVERSITAS GADJAH MADA</li>    
+                </ul>
+                </div>
+    
+
+            <div id="organisasi" class="tab-content">
+                <h2>Riwayat Organisasi</h2>
+             Google Developer Student Clubs (GDSC):</p>
+                <ul>
+                    <li><strong>Himpunan Mahasiswa Sistem Informasi (HMPSSI)</strong><br>Anggota aktif dalam divisi pengembangan bakat dan riset teknologi.</li>
+                    <li><strong>Komunitas UI/UX Nasional (sektor regional atau nasional seperti UX Indonesia)</strong><br>Komunitas Data Science / Artificial Intelligence (AI).</li>
+                    <li><strong>AIESEC (Organisasi Kepemimpinan Internasional)</strong></li>
+                </ul>
+            </div>
+
+            <div id="pekerjaan" class="tab-content">
+                <h2>Riwayat Pekerjaan</h2>
+                <p>Pengalaman kerja;</p>
+                <ul>
+                    <li><strong>Web Developer (Project-Based)</strong><br>Merancang prototype sistem informasi manajemen data berbasis web berskala lokal.</li>
+                    <li><strong>AI Product Manager (Manajer Produk AI)</strong><br>menjadi otak di balik pembuatan produk berbasis AI.</li>
+                    <li><strong>Prompt Engineer & AI Specialist</strong><br>Merancang, menguji, dan menyempurnakan struktur instruksi (prompt) yang rumit agar sistem AI bisa menghasilkan output (teks, visual, atau data statistik) yang sangat akurat, estetik, dan sesuai kebutuhan</li>
+                    <li><strong>IT Governance & Cyber Security Auditor</strong><br>Mengaudit, merancang kebijakan tata kelola teknologi, dan memastikan sistem informasi sebuah perusahaan atau instansi pemerintah aman dari peretasan serta mematuhi hukum perlindungan data.</li>
+                </ul>
+            </div>
+
+            <div id="karya" class="tab-content">
+                <h2>Karya Tulis / Produk</h2>
+                <p>Produk teknologi serta karya tulis yang telah dikembangkan:</p>
+                <ul>
+                    <li><strong>merancang  Aplikasi Basis Data Manajemen Inventaris</strong><br>Aplikasi berbasis web untuk pengolahan data barang yang terintegrasi fungsi DBMS.</li>
+                    <li><strong> memnuat Studi Kasus Analisis Data Frekuensi Statistika Deskriptif</strong><br>Penyusunan mini-riset pengolahan variabel data kuantitatif menggunakan metode distribusi frekuensi.</li>
+                    <li><strong>membuat produk teknologi dan desain seperti sistem informasi manajemen inventaris berbasis web,membuat aplikasi mobile pelayanan.</strong></li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        "Terus Belajar, Berkembang, dan Bermanfaat"
+    </footer>
+
+    <script>
+        function openTab(evt, tabId) {
+            var i, tabcontent, tablinks;
+            
+            // Menyembunyikan seluruh isi tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Menghapus garis bawah/status aktif pada teks menu kiri
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Memunculkan tab yang sedang dipilih dan memberikan efek aktif
+            document.getElementById(tabId).classList.add("active");
+            if (evt) {
+                evt.currentTarget.classList.add("active");
+            }
+        }
+
+        // Otomatis membuka menu 'Profil' saat halaman pertama kali diakses
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
